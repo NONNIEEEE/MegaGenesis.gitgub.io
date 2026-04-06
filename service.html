@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Megalok - Secure Fastening</title>
+    
+    <link rel="icon" type="image/png" href="images/Logo-removebg-preview.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/Logo-removebg-preview.png" alt="Megalok Logo" class="header-logo-img">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><span>|</span></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><span>|</span></li>
+                <li><a href="index.html#product">Product</a></li>
+                <li><span>|</span></li>
+                <li><a href="service.html">Service</a></li>
+                <li><span>|</span></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li>
+                    <label class="theme-switch" for="darkModeToggle">
+                        <input type="checkbox" id="darkModeToggle">
+                        <span class="slider">
+                        </span>
+                    </label>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="service" class="container">
+            <h3 class="section-tag">↳ Our Services & Demonstrations</h3>
+            <p class="service-subtitle">รับชมวิดีโอสาธิตการใช้งานและบริการของเรา</p>
+
+            <div class="video-grid">
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/medo_nGOLdQ?si=jsS--ms5VqNj8IDz"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h4>สาธิตการใช้งานปืนรัดสายไฟ</h4>
+                        <p>วิธีการตั้งค่าและใช้งานเบื้องต้นเพื่อให้ได้ประสิทธิภาพสูงสุดในการทำงาน</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/L_K368DS3DY?si=n9G0foirDGmgA88S"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h4>Megalok Fastening Solutions</h4>
+                        <p>ความทนทานและมาตรฐานของวัสดุที่เราเลือกใช้ สำหรับงานอุตสาหกรรม</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/0QQakrKnXb8?si=2Tf-xFICrE8Rr4pj"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h4>การบำรุงรักษาอุปกรณ์</h4>
+                        <p>เคล็ดลับการดูแลรักษาเครื่องมือให้อยู่ในสภาพพร้อมใช้งานและยืดอายุการใช้งาน</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-banner">
+            <div class="footer-logo-area">
+                <img src="images/Logo-removebg-preview.png" alt="Mega Logo" class="footer-logo">
+            </div>
+            <div class="footer-details">
+                <h3>Contact</h3>
+                <p><strong>ที่อยู่:</strong> 87 7 ถ. มาบตาพุด ตำบล มาบตาพุด อำเภอเมืองระยอง ระยอง 21150</p>
+                <p><strong>เบอร์โทร:</strong> 064 564 4453</p>
+                <p><strong>Email:</strong> MGL@gmail.com</p>
+                 <p><strong>Line:</strong> mega.gd</p>
+            </div>
+        </div>
+
+        <div class="social-bar">
+            <a href="https://www.facebook.com/profile.php?id=61550780473112" target="_blank" class="social-btn">
+                <img src="icons/facebook.png" alt="FB">
+            </a>
+            <a href="https://line.me/ti/p/@megalok1" target="_blank" class="social-btn">
+                <img src="icons/line.png" alt="Line">
+            </a>
+            <a href="mailto:MGL@gmail.com" class="social-btn">
+                <img src="icons/email.png" alt="Mail">
+            </a>
+            <a href="https://maps.app.goo.gl/akLTZSRNCD6QtL3N6" target="_blank" class="social-btn">
+                <img src="icons/maps-and-flags.png" alt="Maps">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
+</body>
+
+</html>

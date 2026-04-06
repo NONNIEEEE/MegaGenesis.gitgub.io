@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Megalok</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/Logo-removebg-preview.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product.css">
+
+    <script>
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.documentElement.classList.add('dark-mode-preload');
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/Logo-removebg-preview.png" alt="Megalok Logo" class="header-logo-img">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><span>|</span></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><span>|</span></li>
+                <li><a href="index.html#product">Product</a></li>
+                <li><span>|</span></li>
+                <li><a href="service.html">Service</a></li>
+                <li><span>|</span></li>
+                <li><a href="index.html#contact">Contact</a></li>
+
+                <li>
+                    <label class="theme-switch" for="darkModeToggle">
+                        <input type="checkbox" id="darkModeToggle">
+                        <span class="slider"></span>
+                    </label>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- <section class="hero-image-banner">
+        <div class="slides-wrapper" id="slidesWrapper">
+            <div class="slide">
+                <img src="banner6.jpg" alt="Megalok Promotion Banner 1">
+            </div>
+            <div class="slide">
+                <img src="banner5 (Custom).png" alt="Megalok Promotion Banner 2">
+            </div>
+            <div class="slide">
+                <img src="banner3.jpg" alt="Megalok Promotion Banner 3">
+            </div>
+        </div>
+    </section> -->
+
+    <main>
+        <section class="product-detail-container" id="product-display">
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-banner">
+            <div class="footer-logo-area">
+                <img src="images/Logo-removebg-preview.png" alt="Mega Logo" class="footer-logo">
+            </div>
+            <div class="footer-details">
+                <h3>Contact</h3>
+                <p><strong>ที่อยู่:</strong> 87 7 ถ. มาบตาพุด ตำบล มาบตาพุด อำเภอเมืองระยอง ระยอง 21150</p>
+                <p><strong>เบอร์โทร:</strong> 064 564 4453</p>
+                <p><strong>Email:</strong> MGL@gmail.com</p>
+                 <p><strong>Line:</strong> mega.gd</p>
+            </div>
+        </div>
+
+        <div class="social-bar">
+            <a href="https://www.facebook.com/profile.php?id=61550780473112" target="_blank" class="social-btn">
+                <img src="icons/facebook.png" alt="FB">
+            </a>
+            <a href="https://line.me/ti/p/@megalok1" target="_blank" class="social-btn">
+                <img src="icons/line.png" alt="Line">
+            </a>
+            <a href="mailto:MGL@gmail.com" class="social-btn">
+                <img src="icons/email.png" alt="Mail">
+            </a>
+            <a href="https://maps.app.goo.gl/akLTZSRNCD6QtL3N6" target="_blank" class="social-btn">
+                <img src="icons/maps-and-flags.png" alt="Maps">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // ==========================================
+        // 1. ระบบ Banner Slideshow แบบเลื่อน (Slide)
+        // ==========================================
+        let slideIndex = 0;
+        const slidesWrapper = document.getElementById("slidesWrapper");
+        const slides = document.getElementsByClassName("slide");
+
+        function autoSlide() {
+            if (!slidesWrapper || slides.length === 0) return;
+
+            const totalSlides = slides.length;
+            slideIndex++;
+
+            // ถ้ารูปหมดแล้ว ให้กลับไปรูปแรก
+            if (slideIndex >= totalSlides) {
+                slideIndex = 0;
+            }
+
+            // เลื่อนกล่องหุ้มรูปภาพแนวนอน
+            slidesWrapper.style.transform = `translateX(-${slideIndex * 100}%)`;
+
+            // สั่งให้ทำซ้ำทุกๆ 3 วินาที (3000 มิลลิวินาที)
+            setTimeout(autoSlide, 3000);
+        }
+
+        // เริ่มทำงานสไลด์หลังจากโหลดหน้าเสร็จ 3 วินาที
+        setTimeout(autoSlide, 3000);
+
+        // ==========================================
+        // 2. ระบบดึงและแสดงข้อมูลสินค้าตาม ID จาก URL
+        // ==========================================
+        const productsDatabase = [
+            {
+                id: 1,
+                name: " ปืนรัดสายไฟไนลอน (Mini Cable Tie Gun)",
+                images: [
+                    "images/124.png",
+                    "images/126.png",
+                    "images/128.png"
+                ],
+                description: "ปืนรัดสายไฟไนลอน (Mini Cable Tie Gun) จากแบรนด์ Megalok ผลิตจากวัสดุคุณภาพสูง ทนทานต่อการใช้งาน และออกแบบมาเพื่อการยึดติดที่แน่นหนาและปลอดภัย เหมาะสำหรับงานอุตสาหกรรมทั่วไป"
+            },
+            {
+                id: 2,
+                name: "สายเคเบิ้ลไทร์ไนลอนแบบล็อคตัวเอง (Self-locking nylon cable ties)",
+                images: [
+                    "images/14.png",
+                    "images/28.png",
+                    "images/139.png"
+                ],
+                description: "สายเคเบิ้ลไทร์ไนลอนแบบล็อคตัวเอง (Self-locking nylon cable ties) ซึ่งเป็นอุปกรณ์รัดสายไฟคุณภาพเยี่ยมระดับมืออาชีพที่ออกแบบมาให้สามารถใช้งานได้อย่างหลากหลายครับจุดเด่นสำคัญของสินค้ารุ่นนี้คือความแข็งแรงและทนทานต่อแรงดึงสูง เมื่อล็อคแล้วจะยึดติดแน่นหนาไม่หลุดลอกหรือคลายตัวได้ง่าย ตัววัสดุมีความปลอดภัยและถูกออกแบบมาให้ทนทานต่อสภาพแวดล้อมที่ท้าทายได้อย่างดีเยี่ยม ทั้งทนต่อการกัดกร่อน ทนต่อรังสียูวี ทนต่อสารเคมี รวมถึงทนต่อสภาพอากาศทั้งความเย็นจัดและอุณหภูมิที่สูงมาก นอกจากนี้ยังมีให้เลือกใช้งานหลากหลายรูปแบบตามความเหมาะสม ทั้งแบบสายสีดำและสีขาวเพื่อตอบโจทย์ทุกความต้องการของงาน"
+            },
+            {
+                id: 3,
+                name: "(Stainless Steel Cable Tie Gun/Tensioner Tool) เครื่องมือรัดสายไฟสแตนเลส",
+                images: [
+                    "images/112.png",
+                    "images/116.png",
+                    "images/118.png",
+                    "images/120.png"
+                ],
+                description: "อุปกรณ์ที่ออกแบบมาเพื่อใช้สำหรับการจัดเก็บและยึดสายไฟให้เป็นระเบียบเรียบร้อย โดยมีจุดเด่นในเรื่องของความทนทานต่อความร้อนและทนต่อสภาพอากาศที่เปลี่ยนแปลงได้เป็นอย่างดีเยี่ยม สำหรับขนาดของสายรัดที่สามารถนำมาใช้งานร่วมกับอุปกรณ์ตัวนี้ได้ จะต้องมีความกว้างอยู่ที่ 4 ถึง 20 มิลลิเมตร และมีความหนาตั้งแต่ 0.4 ถึง 0.8 มิลลิเมตรครับ"
+            },
+            {
+                id: 4,
+                name: "Tie Gun (เครื่องมือดึงสายรัดและตัดอัตโนมัติ)",
+                images: [
+                    "images/94.png",
+                    "images/43.png"
+                ],
+                description: "เครื่องมือดึงสายรัดและตัดอัตโนมัติ (Tie Gun) ที่ถูกออกแบบมาให้ใช้งานได้ง่าย ช่วยลดเวลาในการทำงานและเพิ่มความสะดวกสบายให้กับผู้ใช้งานเป็นอย่างมากครับ ตัวเครื่องมีความโดดเด่นในเรื่องของความแข็งแรงทนทานเนื่องจากผลิตจากเหล็กกล้าเครื่องมือพิเศษ (Special Tool Steel Body) และมีการออกแบบตามหลักสรีรศาสตร์ (Ergonomic design) โดยเฉพาะในส่วนของด้ามจับ TPR ที่ช่วยให้จับได้ถนัดมือและใช้งานได้อย่างสะดวกสบาย นอกจากนี้ตัวเครื่องยังมีสปริงที่มีความยืดหยุ่นกำลังดี หัวตัดที่คมกริบ และมีด้ามจับสำหรับการตัด (Cutting Handle) ที่ออกแบบมาให้ใช้งานง่าย เพียงแค่ดันขึ้นก็สามารถตัดสายรัดให้ขาดได้อย่างสมบูรณ์ครับ"
+            }
+        ];
+
+        // รับค่า id จากพารามิเตอร์ใน URL (เช่น product.html?id=1)
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = parseInt(urlParams.get('id'));
+
+        // หาสินค้าที่ตรงกับ ID
+        const product = productsDatabase.find(p => p.id === productId);
+        const displayDiv = document.getElementById('product-display');
+
+        // ฟังก์ชันสำหรับเปลี่ยนรูปภาพใหญ่ เมื่อผู้ใช้คลิกที่รูป Thumbnail เล็ก
+        window.changeImage = function (newSrc) {
+            const mainImg = document.getElementById('mainImage');
+            mainImg.style.opacity = 0.5;
+            setTimeout(() => {
+                mainImg.src = newSrc;
+                mainImg.style.opacity = 1;
+            }, 150);
+        };
+
+        // Render ข้อมูลลง HTML
+        if (product) {
+            let thumbnailsHTML = '';
+            product.images.forEach((imgSrc, index) => {
+                thumbnailsHTML += `<img src="${imgSrc}" class="thumbnail" onclick="changeImage('${imgSrc}')" alt="thumbnail ${index + 1}">`;
+            });
+
+            displayDiv.innerHTML = `
+                <h3 class="section-tag">↳ Product Detail: ${product.name}</h3>
+                <div class="product-flex">
+                    
+                    <div class="product-gallery">
+                        <div class="product-image-wrapper">
+                            <img src="${product.images[0]}" alt="${product.name}" id="mainImage" class="product-image">
+                        </div>
+                        <div class="thumbnail-container">
+                            ${thumbnailsHTML}
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+                        <h1 class="product-title">${product.name}</h1>
+                        <div class="product-desc">
+                            <strong>↳ Product Features:</strong><br><br>
+                            ${product.description}
+                        </div>
+                        <a href="index.html#product" class="btn-theme">⬅ กลับไปหน้าสินค้า</a>
+                    </div>
+                </div>
+            `;
+        } else {
+            // กรณีไม่มี ID หรือหาสินค้าไม่เจอ
+            displayDiv.innerHTML = `
+                <h3 class="section-tag" style="color: red;">↳ Error: ไม่พบสินค้า</h3>
+                <p style="text-align: center; margin-top: 50px;">กรุณากลับไปเลือกสินค้าใหม่อีกครั้ง</p>
+                <div style="text-align: center; margin-top: 20px;">
+                    <a href="index.html#product" class="btn-theme">⬅ กลับไปหน้าหลัก</a>
+                </div>
+            `;
+        }
+
+        // ==========================================
+        // 3. ระบบ Dark Mode (อ่านค่าและสลับโหมด)
+        // ==========================================
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        // เช็คค่าเมื่อหน้าเว็บโหลดเสร็จ
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark-mode');
+            document.documentElement.classList.remove('dark-mode-preload');
+            if (darkModeToggle) {
+                darkModeToggle.textContent = '☀️';
+            }
+        }
+
+        if (darkModeToggle) {
+            darkModeToggle.addEventListener('click', () => {
+                body.classList.toggle('dark-mode');
+
+                if (body.classList.contains('dark-mode')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkModeToggle.textContent = '☀️';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkModeToggle.textContent = '🌙';
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>

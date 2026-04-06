@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Megalok - Secure Fastening</title>
+    
+    <link rel="icon" type="image/png" href="images/Logo-removebg-preview.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/Logo-removebg-preview.png" alt="Megalok Logo" class="header-logo-img">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><span>|</span></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><span>|</span></li>
+                <li><a href="index.html#product">Product</a></li>
+                <li><span>|</span></li>
+                <li><a href="service.html">Service</a></li>
+                <li><span>|</span></li>
+                <li><a href="index.html#contact">Contact</a></li>
+
+                <li>
+                    <label class="theme-switch" for="darkModeToggle">
+                        <input type="checkbox" id="darkModeToggle">
+                        <span class="slider"></span>
+                    </label>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-image-banner">
+        <div class="slides-wrapper" id="slidesWrapper">
+            <div class="slide">
+                <img src="banner6.png" alt="Megalok Promotion Banner 1">
+            </div>
+            <div class="slide">
+                <img src="banner5.png" alt="Megalok Promotion Banner 2">
+            </div>
+            <div class="slide">
+                <img src="banner3.2.png" alt="Megalok Promotion Banner 3">
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section id="home" class="container">
+            <h3 class="section-tag">↳ HomePage</h3>
+
+            <div class="single-hero-box slide-in-right">
+
+                <button class="hero-arrow left-arrow" id="prevHeroBtn">❮</button>
+                <button class="hero-arrow right-arrow" id="nextHeroBtn">❯</button>
+
+                <div class="card-image-wrapper" id="heroImageWrapper">
+                    <img src="images/5-removebg-preview.png" alt="Product Image 1">
+                    <img src="aboutme/1 (Custom).jpg" alt="Product Image 6">
+                    <img src="images/41-removebg-preview.png" alt="Product Image 2">
+                    <img src="aboutme/2 (Custom).jpg" alt="Product Image 6">
+                    <img src="images/104-removebg-preview.png" alt="Product Image 3">
+                    <img src="aboutme/3 (Custom).jpg" alt="Product Image 6">
+                    <img src="images/136-removebg-preview.png" alt="Product Image 4">
+                    <img src="aboutme/4 (Custom).jpg" alt="Product Image 6">
+                    <img src="images/150-removebg-preview.png" alt="Product Image 5">
+                    <img src="aboutme/5 (Custom).jpg" alt="Product Image 6">
+                    <img src="images/80-removebg-preview.png" alt="Product Image 6">
+                    <img src="aboutme/6 (Custom).jpg" alt="Product Image 6">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="container">
+            <h3 class="section-tag">↳ About Me</h3>
+            <div class="about-flex">
+                <div class="about-card" style="overflow: hidden;">
+                    <img id="aboutImg" src="aboutme/1 (Custom).jpg" alt="Nylon Cable Tie Gun" style="transition: transform 0.4s ease, opacity 0.4s ease; transform: translateX(0);">
+                </div>
+                <div class="about-content">
+                    <h1 id="aboutTitle">เกี่ยวกับ MeGA Genesis Graphic Design 
+                    </h1>
+                    <p id="aboutDesc">ยินดีต้อนรับสู่ร้านป้าย MeGA Genesis Graphic Design ศูนย์รวมบริการงานป้ายครบวงจรในจังหวัดระยองที่พร้อมดูแลและเนรมิตทุกไอเดียของคุณให้เป็นจริง เราเชี่ยวชาญด้านการออกแบบและผลิตสื่อโฆษณาที่หลากหลายเพื่อตอบโจทย์ทุกความต้องการของธุรกิจ ไม่ว่าจะเป็นงานพิมพ์ไวนิลคุณภาพสูง งานโครงสร้างอย่างกรอบไม้ติดไวนิลและป้ายติดเสาไฟ ไปจนถึงงานสติ๊กเกอร์ทุกรูปแบบ ทั้งสติ๊กเกอร์ไดคัดและสติ๊กเกอร์ติดฟิวเจอร์บอร์ด นอกจากนี้ เรายังพร้อมรองรับงานป้ายเฉพาะทางด้วยบริการตัดฉลุวัสดุจากเครื่อง CNC งานแกะสลักป้าย Tag Rowmark และป้าย Traffolyte สำหรับงานอุตสาหกรรม ด้วยประสบการณ์และความใส่ใจในทุกรายละเอียด เรามุ่งมั่นที่จะส่งมอบผลงานที่สวยงาม แข็งแรงทนทาน และช่วยยกระดับภาพลักษณ์แบรนด์ของคุณให้โดดเด่นอย่างมืออาชีพ</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="product" class="container">
+            <h3 class="section-tag">↳ Product</h3>
+            
+            <div class="product-slider-wrapper">
+                <button class="slider-arrow slider-prev" id="prevProductBtn">❮</button>
+
+                <div class="product-slider" id="productSlider">
+                    <a href="product.html?id=1" class="p-item">
+                        <div class="p-img">
+                            <img src="images/124.png" class="img-main" alt="Main Image">
+                            <img src="images/132.png" class="img-hover" alt="Hover Image">
+                        </div>
+                        <p>ปืนรัดสายไฟไนลอน (Mini Cable Tie Gun)</p>
+                    </a>
+
+                    <a href="product.html?id=2" class="p-item">
+                        <div class="p-img">
+                            <img src="images/14.png" class="img-main" alt="Main Image">
+                            <img src="images/28.png" class="img-hover" alt="Hover Image">
+                        </div>
+                        <p>สายเคเบิ้ลไทร์ไนลอนแบบล็อคตัวเอง (Self-locking nylon cable ties)</p>
+                    </a>
+
+                    <a href="product.html?id=3" class="p-item">
+                        <div class="p-img">
+                            <img src="images/110.png" class="img-main" alt="Main Image">
+                            <img src="images/108.png" class="img-hover" alt="Hover Image">
+                        </div>
+                        <p>(Stainless Steel Cable Tie Gun/Tensioner Tool) เครื่องมือรัดสายไฟสแตนเลส</p>
+                    </a>
+
+                    <a href="product.html?id=4" class="p-item">
+                        <div class="p-img">
+                            <img src="images/94.png" class="img-main" alt="Main Image">
+                            <img src="images/43.png" class="img-hover" alt="Hover Image">
+                        </div>
+                        <p>Tie Gun (เครื่องมือดึงสายรัดและตัดอัตโนมัติ)</p>
+                    </a>
+                </div>
+
+                <button class="slider-arrow slider-next" id="nextProductBtn">❯</button>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-banner">
+            <div class="footer-logo-area">
+                <img src="images/Logo-removebg-preview.png" alt="Mega Logo" class="footer-logo">
+            </div>
+            <div class="footer-details">
+                <h3>Contact</h3>
+                <p><strong>ที่อยู่:</strong> 87 7 ถ. มาบตาพุด ตำบล มาบตาพุด อำเภอเมืองระยอง ระยอง 21150</p>
+                <p><strong>เบอร์โทร:</strong> 064 564 4453</p>
+                <p><strong>Email:</strong> MGL@gmail.com</p>
+                <p><strong>Line:</strong> mega.gd</p>
+            </div>
+        </div>
+
+        <div class="social-bar">
+            <a href="https://www.facebook.com/profile.php?id=61550780473112" target="_blank" class="social-btn">
+                <img src="icons/facebook.png" alt="FB">
+            </a>
+            <a href="https://line.me/ti/p/@megalok1" target="_blank" class="social-btn">
+                <img src="icons/line.png" alt="Line">
+            </a>
+            <a href="mailto:MGL@gmail.com" class="social-btn">
+                <img src="icons/email.png" alt="Mail">
+            </a>
+            <a href="https://maps.app.goo.gl/akLTZSRNCD6QtL3N6" target="_blank" class="social-btn">
+                <img src="icons/maps-and-flags.png" alt="Maps">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // ==========================================
+        // 1. ระบบ Banner Slideshow หลัก
+        // ==========================================
+        let slideIndex = 0;
+        const slidesWrapper = document.getElementById("slidesWrapper");
+        const slides = document.getElementsByClassName("slide");
+        const totalSlides = slides.length;
+
+        function autoSlide() {
+            slideIndex++;
+            if (slideIndex >= totalSlides) {
+                slideIndex = 0;
+            }
+            slidesWrapper.style.transform = `translateX(-${slideIndex * 100}%)`;
+            setTimeout(autoSlide, 4000);
+        }
+
+        if (totalSlides > 0) {
+            setTimeout(autoSlide, 4000);
+        }
+
+        // ==========================================
+        // 1.5 ระบบเฟดเปลี่ยนรูปในหมวด HomePage พร้อมปุ่มลูกศรที่เปลี่ยนสีได้
+        // ==========================================
+        const heroWrapper = document.getElementById('heroImageWrapper');
+        const heroImages = heroWrapper.querySelectorAll('img');
+        const prevBtn = document.getElementById('prevHeroBtn');
+        const nextBtn = document.getElementById('nextHeroBtn');
+
+        let currentImgIndex = 0;
+        const imgCount = heroImages.length;
+        let slideInterval;
+
+        function updateArrowButtons() {
+            if (currentImgIndex === 0) {
+                prevBtn.classList.add('disabled');
+            } else {
+                prevBtn.classList.remove('disabled');
+            }
+            if (currentImgIndex === imgCount - 1) {
+                nextBtn.classList.add('disabled');
+            } else {
+                nextBtn.classList.remove('disabled');
+            }
+        }
+
+        function showHeroImage(index) {
+            heroImages.forEach(img => img.classList.remove('active'));
+            currentImgIndex = index;
+            heroImages[currentImgIndex].classList.add('active');
+            updateArrowButtons();
+        }
+
+        function startHeroSlide() {
+            slideInterval = setInterval(() => {
+                let nextIndex = currentImgIndex + 1;
+                if (nextIndex >= imgCount) {
+                    nextIndex = 0;
+                }
+                showHeroImage(nextIndex);
+            }, 3500);
+        }
+
+        function resetHeroSlideTimer() {
+            clearInterval(slideInterval);
+            startHeroSlide();
+        }
+
+        if (imgCount > 0) {
+            heroImages[0].classList.add('active');
+            updateArrowButtons();
+        }
+
+        if (imgCount > 1) {
+            startHeroSlide();
+
+            prevBtn.addEventListener('click', () => {
+                if (currentImgIndex > 0) {
+                    showHeroImage(currentImgIndex - 1);
+                    resetHeroSlideTimer();
+                }
+            });
+
+            nextBtn.addEventListener('click', () => {
+                if (currentImgIndex < imgCount - 1) {
+                    showHeroImage(currentImgIndex + 1);
+                    resetHeroSlideTimer();
+                }
+            });
+
+            heroWrapper.addEventListener('click', (event) => {
+                if (event.target === prevBtn || event.target === nextBtn || event.target.closest('.hero-arrow')) {
+                    return;
+                }
+                const rect = heroWrapper.getBoundingClientRect();
+                const xPosition = event.clientX - rect.left;
+                const wrapperWidth = heroWrapper.offsetWidth;
+
+                if (xPosition < wrapperWidth / 2) {
+                    if (currentImgIndex > 0) {
+                        showHeroImage(currentImgIndex - 1);
+                        resetHeroSlideTimer();
+                    }
+                } else {
+                    if (currentImgIndex < imgCount - 1) {
+                        showHeroImage(currentImgIndex + 1);
+                        resetHeroSlideTimer();
+                    }
+                }
+            });
+
+        } else {
+            prevBtn.style.display = 'none';
+            nextBtn.style.display = 'none';
+        }
+
+        // ==========================================
+        // 2. ระบบ Animation สไลด์รูป (เมื่อเลื่อนมาเจอ)
+        // ==========================================
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedCards = document.querySelectorAll('.slide-in-right');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
+
+            animatedCards.forEach(card => {
+                observer.observe(card);
+            });
+        });
+
+        // ==========================================
+        // 3. ระบบสไลด์รูปอัตโนมัติ (About Me) - เลื่อนสไลด์ด้านข้าง
+        // ==========================================
+        const aboutImagesArray = [
+            "aboutme/2 (Custom).jpg",
+            "aboutme/3 (Custom).jpg",
+            "aboutme/4 (Custom).jpg",
+            "aboutme/5 (Custom).jpg",
+            "aboutme/6 (Custom).jpg",
+            "aboutme/7 (Custom).jpg",
+            "aboutme/8 (Custom).jpg",       
+        ]; 
+
+        let currentAboutIndex = 0;
+        const aboutImgElement = document.getElementById("aboutImg");
+
+        // ให้รูปเปลี่ยนอัตโนมัติทุกๆ 3.5 วินาที
+        setInterval(() => {
+            // สไลด์รูปเก่าออกไปทางซ้ายและเฟดจางลง
+            aboutImgElement.style.transition = "transform 0.4s ease, opacity 0.4s ease";
+            aboutImgElement.style.transform = "translateX(-100%)";
+            aboutImgElement.style.opacity = 0;
+
+            // รอให้แอนิเมชันเลื่อนไปทางซ้ายทำงานเสร็จ (400ms) แล้วจึงเตรียมรูปใหม่
+            setTimeout(() => {
+                currentAboutIndex++;
+                if (currentAboutIndex >= aboutImagesArray.length) {
+                    currentAboutIndex = 0;
+                }
+                
+                // เปลี่ยน Source เป็นรูปถัดไป
+                aboutImgElement.src = aboutImagesArray[currentAboutIndex];
+                
+                // ย้ายรูปไปซ่อนไว้ทางขวาก่อน (ปิดแอนิเมชันชั่วคราวเพื่อย้ายพริบตาเดียว)
+                aboutImgElement.style.transition = "none";
+                aboutImgElement.style.transform = "translateX(100%)";
+                
+                // บังคับให้เบราว์เซอร์รับทราบตำแหน่งที่เปลี่ยนไป (Reflow) ก่อนเปิดแอนิเมชัน
+                void aboutImgElement.offsetWidth;
+                
+                // เปิดแอนิเมชันกลับมา แล้วเลื่อนรูปเข้าสู่ตรงกลาง (สไลด์เข้ามาจากขวา)
+                aboutImgElement.style.transition = "transform 0.4s ease, opacity 0.4s ease";
+                aboutImgElement.style.transform = "translateX(0)";
+                aboutImgElement.style.opacity = 1;
+                
+            }, 400); // 400ms คือเวลาเดียวกับ transition 
+
+        }, 3500); 
+
+        // ==========================================
+        // 4. ระบบ Smooth Scroll ปรับความเร็วได้
+        // ==========================================
+        document.querySelectorAll('nav ul li a[href^="index.html#"], nav ul li a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                let targetId = this.getAttribute('href').split('#')[1];
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    e.preventDefault();
+
+                    const headerOffset = 90;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    const duration = 1200;
+
+                    const start = window.pageYOffset;
+                    const distance = offsetPosition - start;
+                    let startTime = null;
+
+                    function easeInOutQuad(t, b, c, d) {
+                        t /= d / 2;
+                        if (t < 1) return c / 2 * t * t + b;
+                        t--;
+                        return -c / 2 * (t * (t - 2) - 1) + b;
+                    }
+
+                    function animation(currentTime) {
+                        if (startTime === null) startTime = currentTime;
+                        const timeElapsed = currentTime - startTime;
+                        const run = easeInOutQuad(timeElapsed, start, distance, duration);
+                        window.scrollTo(0, run);
+                        if (timeElapsed < duration) {
+                            requestAnimationFrame(animation);
+                        }
+                    }
+
+                    requestAnimationFrame(animation);
+                }
+            });
+        });
+
+        // ==========================================
+        // 5. ระบบ Dark Mode (แบบสวิตช์ พร้อมจดจำค่าด้วย LocalStorage)
+        // ==========================================
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+
+        // ==========================================
+        // 🛠️ 6. ระบบปุ่มเลื่อน Product Slider 
+        // ==========================================
+        const productSlider = document.getElementById('productSlider');
+        const prevProductBtn = document.getElementById('prevProductBtn');
+        const nextProductBtn = document.getElementById('nextProductBtn');
+
+        if (productSlider && prevProductBtn && nextProductBtn) {
+            const scrollAmount = 300; 
+            
+            prevProductBtn.addEventListener('click', () => {
+                productSlider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            });
+            
+            nextProductBtn.addEventListener('click', () => {
+                productSlider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            });
+        }
+
+    </script>
+</body>
+
+</html>
