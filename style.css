@@ -57,12 +57,13 @@ header {
     transition: background-color 0.4s ease, box-shadow 0.4s ease;
 }
 
+/* ค้นหาคลาสนี้ใน style.css หรือเพิ่มเข้าไปใหม่ */
 .header-logo-img {
-    height: 50px; 
+    height: 50px; /* กำหนดความสูงเริ่มต้นที่ต้องการ */
     width: auto;
-    transform: scale(2.5); 
-    transform-origin: left center; 
-    transition: transform 0.3s ease; 
+    transform: scale(2.5); /* ปรับตัวเลข 2.0 เพื่อขยายขนาด (2.0 = 200%) */
+    transform-origin: left center; /* ให้ขยายออกจากด้านซ้าย */
+    transition: transform 0.3s ease; /* เพิ่มความสมูท */
 }
 
 nav {
@@ -193,7 +194,7 @@ footer#contact { background-color: var(--color-5); }
 /* ========================================== */
 .hero-image-banner {
     width: 100%;
-    height: 450px; 
+    height: 450px; /* ปรับตัวเลขนี้ลง (เช่น จากเดิม 500px เหลือ 300px) */
     overflow: hidden;
     position: relative;
 }
@@ -209,12 +210,13 @@ footer#contact { background-color: var(--color-5); }
     box-sizing: border-box;
 }
 
+/* ค้นหาและแก้ไขส่วนนี้ครับ */
 .slide img {
     width: 100%;
-    height: 400px;      
+    height: 400px;      /* กำหนดความสูงให้เท่ากับ .hero-image-banner */
     display: block;
-    object-fit: cover;  
-    object-position: center; 
+    object-fit: cover;  /* สำคัญ: ทำให้รูปขยายเต็มพื้นที่โดยไม่เสียสัดส่วน */
+    object-position: center; /* สำคัญ: สั่งให้จัดกึ่งกลางรูปภาพเสมอ */
 }
 
 .single-hero-box {
@@ -571,12 +573,116 @@ body.dark-mode {
     --color-6: #2b0c16;
 }
 
+body.dark-mode header {
+    background-color: rgba(5, 8, 15, 0.95) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+body.dark-mode .card,
+body.dark-mode .about-card,
+body.dark-mode .footer-banner,
+body.dark-mode .social-btn { filter: brightness(0.85); }
+body.dark-mode .social-btn img { filter: brightness(0) invert(0.8); }
+
+/* ========================================== */
+/* 📱💻 RESPONSIVE & ORIENTATION (ปรับให้พอดีทุกจอ) */
+/* ========================================== */
+
+/* 💻 Tablet แนวตั้ง & มือถือแนวนอนจอใหญ่ (ต่ำกว่า 992px) */
+@media (max-width: 992px) {
+    .video-grid { grid-template-columns: repeat(2, 1fr); }
+    .about-flex { gap: 30px; }
+}
+
+/* 📱 [พิเศษ] มือถือแนวนอน (Landscape) ที่มีความสูงจอน้อย */
+@media (max-height: 500px) and (orientation: landscape) {
+    html { scroll-padding-top: 70px; }
+    body { padding-top: 60px; }
+    header { padding: 10px 5%; }
+    .header-logo-img { max-height: 35px; }
+    section.container { padding: 20px; }
+}
+
+/* 📱 มือถือแนวตั้ง (Portrait) - ต่ำกว่า 768px */
+@media (max-width: 768px) {
+    html { scroll-padding-top: 150px; }
+    body { padding-top: 140px; }
+    header {
+        flex-direction: column;
+        padding: 15px 5%;
+        gap: 15px;
+    }
+    
+    nav {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap; 
+        justify-content: center;
+        gap: 10px 15px;
+    }
+
+    .dark-mode-btn, .theme-switch {
+        position: absolute;
+        top: 20px;
+        right: 5%; 
+        margin: 0;
+    }
+    
+    .hero-grid, .about-flex, .video-grid { 
+        grid-template-columns: 1fr; 
+    }
+
+    /* 🛠️ ย่อขนาดกล่องสินค้าบนมือถือ และปรับปุ่มลูกศร */
+    .product-slider .p-item { flex: 0 0 220px; }
+    .slider-prev { left: -10px; }
+    .slider-next { right: -10px; }
+    .slider-arrow { width: 35px; height: 35px; font-size: 16px; }
+    
+    section.container, footer#contact {
+        width: 92%; 
+        margin: 20px auto; 
+        padding: 30px 20px;
+    }
+    
+    .single-hero-box { padding: 0 40px; }
+    
+    .footer-banner { flex-direction: column; }
+    .footer-banner::after { display: none; }
+    .footer-logo-area {
+        border-right: none;
+        border-bottom: 1px solid var(--color-3); 
+        padding: 20px 0;
+    }
+}
+
+/* 📱 มือถือแนวตั้งจอเล็กมาก (ต่ำกว่า 480px) */
+@media (max-width: 480px) {
+    .single-hero-box { padding: 0 35px; }
+    .hero-arrow { width: 35px; height: 35px; font-size: 14px; }
+    
+    .btn-next-about {
+        padding: 8px 16px; font-size: 14px;
+        bottom: 15px; right: 15px;
+    }
+
+    /* 🛠️ ย่อกล่องสินค้าลงอีกนิดสำหรับจอเล็กมากๆ */
+    .product-slider .p-item { flex: 0 0 180px; }
+    
+    nav ul li a { font-size: 14px; padding: 0 5px; }
+    .social-bar { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+}
 /* ========================================== */
 /* 🚀 Scrolling Text (Marquee) ใต้ Banner */
 /* ========================================== */
 .scrolling-text-container {
     width: 100%;
-    background-color: var(--color-5); /* สีแดงของธีม */
+    background-color: var(--color-5); /* ใช้สีแดงของธีมเพื่อให้เด่นชัด */
     color: #ffffff; /* ตัวหนังสือสีขาว */
     padding: 10px 0;
     overflow: hidden;
@@ -591,14 +697,17 @@ body.dark-mode {
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 1px;
+    /* ตั้งค่าเริ่มต้นให้อยู่ชิดขวาสุดของหน้าจอ */
     padding-left: 100%; 
     animation: scroll-left 25s linear infinite;
 }
 
+/* เอฟเฟกต์หยุดวิ่งเมื่อเอาเมาส์ชี้ (ถ้าไม่ชอบลบออกได้ครับ) */
 .scrolling-text-container:hover .scrolling-text {
     animation-play-state: paused;
 }
 
+/* Keyframes สำหรับให้ข้อความวิ่งจากขวาไปซ้าย */
 @keyframes scroll-left {
     0% {
         transform: translateX(0);
